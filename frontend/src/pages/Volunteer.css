@@ -1,0 +1,145 @@
+.page-hero--volunteer {
+  background: linear-gradient(135deg, #0f2240 0%, #1a3560 100%);
+  padding: var(--s10) 0;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero--volunteer::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: radial-gradient(ellipse at 30% 60%, rgba(255,107,0,.15) 0%, transparent 55%);
+  pointer-events:none;
+}
+.page-hero--volunteer .page-hero__inner { position:relative; display:flex; flex-direction:column; gap:var(--s5); max-width:640px; }
+.page-hero--volunteer .page-hero__heading { color:var(--white); }
+.page-hero__em { font-style:italic; color:var(--saffron-light); }
+.page-hero--volunteer .page-hero__sub { font-size:1.1rem; color:rgba(255,255,255,.72); line-height:1.75; }
+
+/* Benefits */
+.volunteer-benefits { background: var(--off-white); }
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: var(--s5);
+}
+.benefit-card {
+  padding: var(--s6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  text-align: center;
+  align-items: center;
+}
+.benefit-card__icon  { font-size: 2rem; }
+.benefit-card__title { font-size:.95rem; font-weight:700; color:var(--navy); }
+.benefit-card__desc  { font-size:.85rem; color:var(--text-secondary); line-height:1.6; }
+
+/* Roles */
+.volunteer-roles { background: var(--white); padding: var(--s9) 0; }
+.section-header  { display:flex; flex-direction:column; gap:var(--s3); margin-bottom:var(--s7); }
+.section-header__heading { color:var(--navy); }
+.section-header__sub { font-size:1rem; color:var(--text-secondary); }
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: var(--s4);
+}
+.role-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s4) var(--s5);
+  border-radius: var(--r-md);
+  border: 2px solid var(--border);
+  background: var(--white);
+  cursor: pointer;
+  transition: var(--t-base);
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+}
+.role-chip:hover { border-color:var(--saffron); background:var(--saffron-dim); color:var(--saffron-hover); }
+.role-chip--active { border-color:var(--saffron); background:var(--saffron-dim); color:var(--saffron-hover); }
+.role-chip__icon  { font-size:1.4rem; }
+.role-chip__label { font-weight:600; }
+
+/* Form */
+.volunteer-form-section { background: var(--off-white); }
+.volunteer-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: var(--s10);
+  align-items: start;
+}
+.volunteer-form-header { display:flex; flex-direction:column; gap:var(--s4); }
+.volunteer-form-header__heading { color:var(--navy); }
+.volunteer-form-header__sub     { font-size:1rem; color:var(--text-secondary); line-height:1.7; }
+
+.volunteer-form {
+  padding: var(--s8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s5);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s5);
+}
+.form-group   { display:flex; flex-direction:column; gap:var(--s2); }
+.form-label   { font-size:.875rem; font-weight:600; color:var(--text-primary); }
+.form-input--error { border-color:#ef4444; }
+.form-input--error:focus { box-shadow:0 0 0 3px rgba(239,68,68,.12); }
+.form-error   { font-size:.78rem; color:#ef4444; font-weight:500; }
+
+.form-alert {
+  padding: var(--s4) var(--s5);
+  border-radius: var(--r-sm);
+  font-size:.875rem;
+  font-weight:600;
+}
+.form-alert--error {
+  background: #fff1f1;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.volunteer-form__submit { align-self:flex-start; }
+.volunteer-form__tip {
+  font-size:.825rem;
+  color:var(--text-muted);
+}
+.volunteer-form__tip-link { color:var(--saffron); font-weight:600; }
+
+/* Success */
+.volunteer-success {
+  background:var(--white);
+  border-radius:var(--r-xl);
+  border:1px solid var(--border);
+  padding:var(--s10) var(--s8);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:var(--s5);
+  animation:fadeUp .5s both;
+}
+.volunteer-success__icon    { font-size:4rem; }
+.volunteer-success__heading { color:var(--navy); font-size:1.5rem; font-weight:700; }
+.volunteer-success__sub     { color:var(--text-secondary); max-width:400px; }
+
+/* Responsive */
+@media (max-width:900px) {
+  .benefits-grid { grid-template-columns:repeat(2,1fr); }
+  .volunteer-form-container { grid-template-columns:1fr; }
+  .roles-grid    { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:540px) {
+  .form-row      { grid-template-columns:1fr; }
+  .roles-grid    { grid-template-columns:1fr; }
+  .benefits-grid { grid-template-columns:1fr; }
+}

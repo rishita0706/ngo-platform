@@ -17,14 +17,14 @@
 [Features](#-features) · [Architecture](#️-architecture) · [Installation](#-installation) · [API Docs](#-api-reference) · [ML Model](#-ml-model) · [Contributing](#-contributors)
 
 </div>
-
+, focused on free education, digital literacy, and community welfare for underprivileged children
 --- -->
 
 ## 📌 Project Overview
 
-NayePankh Foundation is a registered NGO in Uttar Pradesh, India, focused on free education, digital literacy, and community welfare for underprivileged children. This platform is the NGO's full-stack digital presence, combining:
+NayePankh Foundation is a registered NGO in Uttar Pradesh, India. This platform is the NGO's full-stack demo digital presence, combining:
 
-- A **production-ready React frontend** with a custom design system — hero sections, animated impact stats, volunteer registration, donation flows, and an accessible chatbot widget
+- A **React frontend** with a custom design system — hero sections, animated impact stats, volunteer registration, donation flows, and an accessible chatbot widget
 - A **Node.js/Express backend** with a modular route/middleware/utility architecture, MongoDB persistence, structured logging, and graceful error handling
 - An **AI-powered volunteer chatbot** with a two-tier architecture: OpenAI GPT-3.5-turbo when available, falling back to an enhanced rule-based engine with session memory and contextual responses — zero downtime regardless of API status
 - A **machine-learning role recommendation engine** that classifies volunteers into the best-fit role (Mentor / Web Support / Field Volunteer) using TF-IDF text features and Logistic Regression, achieving **86.5% cross-validated accuracy** with calibrated confidence scores
@@ -43,7 +43,7 @@ NayePankh Foundation is a registered NGO in Uttar Pradesh, India, focused on fre
 | 🎯 **Role Recommendation** | ML prediction with confidence score + per-class probabilities · Confidence-gated UI (≥75% to surface) |
 | 📱 **Responsive** | Mobile-first · Hamburger drawer · All breakpoints (480 / 768 / 1024 px) |
 | ♿ **Accessible** | ARIA labels, roles, live regions · Keyboard navigation · Visible focus rings · `prefers-reduced-motion` |
-| 🔒 **Security** | Input sanitization before shell exec · Request validation layer · Duplicate-email guard · CORS configuration |
+<!-- | 🔒 **Security** | Input sanitization before shell exec · Request validation layer · Duplicate-email guard · CORS configuration | -->
 
 ---
 

@@ -1,0 +1,13 @@
+{
+  "trained_at": "2026-06-16T11:53:03.200733",
+  "dataset_size": 133,
+  "classes": [
+    "Field Volunteer",
+    "Mentor",
+    "Web Support"
+  ],
+  "cv_accuracy_mean": 0.8652,
+  "cv_accuracy_std": 0.0863,
+  "model_type": "TF-IDF (1,2)-gram + LogisticRegression",
+  "version": "2.0.0"
+}
